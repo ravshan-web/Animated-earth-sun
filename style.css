@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(./images/background-solar-space.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sun-wrapper {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 220px auto;
+  text-align: center;
+  position: relative;
+  z-index: 99;
+}
+
+.sun-wrapper P {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.sun {
+  width: 90%;
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: spin2;
+  animation-duration: 100s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  transform: rotate(360deg);
+}
+
+/* Eath */
+
+.earth-wrapper {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  left: 20%;
+  top: 20%;
+  animation: Earth;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.earth-img {
+  display: block;
+  width: 80%;
+  height: 80%;
+  float: left;
+  animation: spin;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  transform: rotate(360deg);
+}
+
+.earth {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.earth-text p {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+/* Earth animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* SUN animation */
+@keyframes spin2 {
+  0% {
+    transform: scale(1, 1);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: scale(4, 4);
+    transform: rotate(360deg);
+  }
+}
+
+/* EATRH spin 360deg */
+@keyframes Earth {
+  0% {
+    top: 30%;
+    left: 30%;
+  }
+
+  13% {
+    top: 35%;
+    left: 40%;
+  }
+
+  25% {
+    top: 40%;
+    left: 50%;
+  }
+
+  37% {
+    top: 50%;
+    left: 57%;
+    z-index: 12;
+  }
+
+  50% {
+    top: 60%;
+    left: 60%;
+    z-index: 999999;
+  }
+
+  62% {
+    top: 55%;
+    left: 50%;
+    z-index: 999999;
+  }
+
+  75% {
+    top: 50%;
+    left: 40%;
+  }
+
+  87% {
+    top: 42%;
+    left: 35%;
+  }
+
+  100% {
+    top: 30%;
+    left: 30%;
+  }
+}
